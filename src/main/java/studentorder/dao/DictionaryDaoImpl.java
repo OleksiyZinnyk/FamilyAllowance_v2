@@ -26,11 +26,7 @@ public class DictionaryDaoImpl implements DictionaryDao {
             "from jc_country_struct where area_id like ? and area_id <> ?";
 
     private Connection getConnection() throws SQLException {
-        Connection con = DriverManager.getConnection(
-                Config.getProperties(Config.DB_URL),
-                Config.getProperties(Config.DB_LOGIN),
-                Config.getProperties(Config.DB_PASSWORD));
-        return con;
+        return ConnectionBuilder.getConnection();
     }
 
 
@@ -75,7 +71,7 @@ public class DictionaryDaoImpl implements DictionaryDao {
     }
 
     @Override
-    public List<RegisterOffice> findRegisterOffice(String areaId) throws DaoException {
+    public List<RegisterOffice> findRegisterOffices(String areaId) throws DaoException {
         List<RegisterOffice> result = new LinkedList<>();
 
         try (Connection con = getConnection();

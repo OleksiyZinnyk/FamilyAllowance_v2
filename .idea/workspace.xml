@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc9512af-f894-4a74-b91e-2acb3e9e9e14" name="Changes" comment="start">
+    <list default="true" id="dc9512af-f894-4a74-b91e-2acb3e9e9e14" name="Changes" comment="start Unit testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studentorder/SaveStudentOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studentorder/SaveStudentOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studentorder/StudentOrderValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studentorder/StudentOrderValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studentorder/dao/DictionaryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studentorder/dao/DictionaryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studentorder/dao/DictionaryDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studentorder/dao/DictionaryDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studentorder/dao/StudentOrderDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studentorder/dao/StudentOrderDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/studentorder/dao/DictionaryDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/studentorder/dao/DictionaryDaoImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +49,10 @@
     "Application.SimpleRunner.executor": "Run",
     "Application.StudentOrderValidator.executor": "Run",
     "JUnit.DictionaryDaoImplTest.executor": "Run",
+    "JUnit.DictionaryDaoImplTest.testArea.executor": "Run",
+    "JUnit.StudentOrderDaoImplTest.executor": "Run",
+    "JUnit.StudentOrderDaoImplTest.saveStudentOrderError.executor": "Run",
+    "Maven.FamilyAllowance_v2 [compile].executor": "Run",
     "Maven.FamilyAllowance_v2 [package].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -82,8 +91,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DictionaryDaoImplTest.testArea" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FamilyAllowance_v2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="studentorder.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="studentorder.dao" />
+      <option name="MAIN_CLASS_NAME" value="studentorder.dao.DictionaryDaoImplTest" />
+      <option name="METHOD_NAME" value="testArea" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentOrderDaoImplTest.saveStudentOrderError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FamilyAllowance_v2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="studentorder.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="studentorder.dao" />
+      <option name="MAIN_CLASS_NAME" value="studentorder.dao.StudentOrderDaoImplTest" />
+      <option name="METHOD_NAME" value="saveStudentOrderError" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StudentOrderDaoImplTest.saveStudentOrderError" />
+        <item itemvalue="JUnit.DictionaryDaoImplTest.testArea" />
         <item itemvalue="JUnit.DictionaryDaoImplTest" />
       </list>
     </recent_temporary>
@@ -104,11 +147,20 @@
       <option name="project" value="LOCAL" />
       <updated>1767702773737</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="start Unit testing">
+      <option name="closed" value="true" />
+      <created>1767783357053</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1767783357053</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start" />
-    <option name="LAST_COMMIT_MESSAGE" value="start" />
+    <MESSAGE value="start Unit testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="start Unit testing" />
   </component>
 </project>

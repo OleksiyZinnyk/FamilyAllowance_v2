@@ -13,7 +13,7 @@ public interface DictionaryDao {
 
     List<PassportOffice> findPassportOffices(String areaId) throws DaoException;
 
-    List<RegisterOffice> findRegisterOffice(String areaId) throws DaoException;
+    List<RegisterOffice> findRegisterOffices(String areaId) throws DaoException;
 
     List<CountryArea> findAreas(String areaId) throws DaoException;
 

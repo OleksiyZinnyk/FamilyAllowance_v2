@@ -71,13 +71,8 @@ public class StudentOrderDaoImpl implements StudentOrderDao {
                     "INNER JOIN jc_register_office ro_c ON ro_c.r_office_id = soc.c_register_office_id " +
                     "WHERE student_order_status = ? ORDER BY so.student_order_id LIMIT ?";
 
-    //TODO make one method
     private Connection getConnection() throws SQLException {
-        Connection con = DriverManager.getConnection(
-                Config.getProperties(Config.DB_URL),
-                Config.getProperties(Config.DB_LOGIN),
-                Config.getProperties(Config.DB_PASSWORD));
-        return con;
+        return ConnectionBuilder.getConnection();
     }
 
     @Override
