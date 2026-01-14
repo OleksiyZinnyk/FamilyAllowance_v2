@@ -28,7 +28,6 @@ class StudentOrderDaoImplTest {
     void saveStudentOrderError() throws DaoException {
             StudentOrder so = buildStudentOrder(10);
             so.getHusband().setSurName(null);
-
         assertThrows(DaoException.class, () -> {
             new StudentOrderDaoImpl().saveStudentOrder(so);
         });

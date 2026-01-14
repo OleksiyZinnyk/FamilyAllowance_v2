@@ -1,5 +1,7 @@
 package studentorder.dao;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import studentorder.config.Config;
 import studentorder.domain.CountryArea;
 import studentorder.domain.PassportOffice;
@@ -12,6 +14,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class DictionaryDaoImpl implements DictionaryDao {
+
+    public static final Logger logger = LoggerFactory.getLogger(DictionaryDaoImpl.class);
+
 
     public final static String GET_STREET = "SELECT street_code, street_name " +
             "from jc_street where upper(street_name) like upper(?)";
@@ -43,6 +48,7 @@ public class DictionaryDaoImpl implements DictionaryDao {
                 result.add(str);
             }
         }catch (SQLException ex){
+            logger.error(ex.getMessage(), ex);
             throw new DaoException(ex);
         }
         return result;
@@ -65,6 +71,7 @@ public class DictionaryDaoImpl implements DictionaryDao {
                 result.add(str);
             }
         }catch (SQLException ex){
+            logger.error(ex.getMessage(), ex);
             throw new DaoException(ex);
         }
         return result;
@@ -87,6 +94,7 @@ public class DictionaryDaoImpl implements DictionaryDao {
                 result.add(str);
             }
         }catch (SQLException ex){
+            logger.error(ex.getMessage(), ex);
             throw new DaoException(ex);
         }
         return result;
@@ -112,6 +120,7 @@ public class DictionaryDaoImpl implements DictionaryDao {
                 result.add(str);
             }
         }catch (SQLException ex){
+            logger.error(ex.getMessage(), ex);
             throw new DaoException(ex);
         }
         return result;

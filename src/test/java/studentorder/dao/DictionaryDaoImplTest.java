@@ -2,6 +2,8 @@ package studentorder.dao;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import studentorder.domain.CountryArea;
 import studentorder.domain.PassportOffice;
@@ -14,11 +16,14 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.Statement;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
 
 public class DictionaryDaoImplTest {
+
+    private final static Logger logger = LoggerFactory.getLogger(DictionaryDaoImplTest.class);
 
     @BeforeAll
     public static void StartUp() throws Exception {
@@ -27,6 +32,11 @@ public class DictionaryDaoImplTest {
 
     @Test
     public void testStreet() throws DaoException {
+        LocalDateTime dt1 = LocalDateTime.now();
+        LocalDateTime dt2 = LocalDateTime.now();
+        logger.info("Test {} {}", dt1, dt2);
+
+
         List<Street> d = new DictionaryDaoImpl().findStreets("ave");
         Assert.assertTrue(d.size() == 2);
     }
